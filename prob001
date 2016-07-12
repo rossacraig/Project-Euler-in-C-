@@ -24,6 +24,8 @@
     Find the sum of all the multiples of 3 or 5 below 1000.
     
     Source: projecteuler.net/problem=1
+
+    Approach: Iteration
 */
 
 #include <iostream>
@@ -33,16 +35,12 @@ int main()
 {
     int sum = 0;
     for (int n=1; n<1000; n++) {
-        if (n%3 == 0) {
-            sum += n;
-            continue;
-        }
-        else if (n%5 == 0) {
+        if (n%3 == 0 || n%5 == 0) {
             sum += n;
         }
         else continue;
     }
-    cout << "Sum = " << sum << endl;
+    cout << "Answer: " << sum << endl;
 
 	return 0;
 }
